@@ -1,6 +1,8 @@
 ---
 theme: default
-
+fonts:
+  sans: Jetbrains Mono
+  mono: Fira Code
 title: "From Boring to Charming: Building Expressive CLI with Go and Charm CLI"
 # apply UnoCSS classes to the current slide
 class: text-center
