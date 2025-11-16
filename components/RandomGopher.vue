@@ -21,7 +21,7 @@ const selectedGopher = computed(() => {
   return gopherNumbers[pageIndex]
 })
 
-const gopherImage = computed(() => `/imgs/gophers/${selectedGopher.value}.png`)
+const gopherImage = computed(() => `/gdg2k25/gophers/${selectedGopher.value}.png`)
 </script>
 
 <style scoped>
