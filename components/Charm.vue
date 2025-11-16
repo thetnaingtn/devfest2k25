@@ -16,7 +16,7 @@ const charmImages = ['bubbles', 'bubbletea', 'lipgloss']
 const selectedCharm = ref<string>('bubbletea')
 const { $page } = useSlideContext()
 
-const charmImage = computed(() => `/gdg2k25/charm/${selectedCharm.value}.png`)
+const charmImage = computed(() => `/images/charm/${selectedCharm.value}.png`)
 
 const selectRandomCharm = () => {
   const pageIndex = ($page.value - 1) % charmImages.length

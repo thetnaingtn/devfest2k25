@@ -7,7 +7,5 @@ import RandomGopher from '../components/RandomGopher.vue';
 <template>
     <div class="slidev-layout default">
         <slot/>
-        <RandomGopher/>
-        <Charm/>
     </div>
 </template>

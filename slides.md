@@ -32,7 +32,7 @@ The Elm Architecture revolve around three main concepts:
   </li>
   <li v-click>Update - Describes how the state changes in response to messages or user actions</li>
 </ul>
-<img v-click class="mx-auto my-4" width="400" src="/gdg2k25/elm-architecture.png"/>
+<img v-click class="mx-auto my-4" width="400" src="/images/elm-architecture.png"/>
 
 <p v-click>
 These three concepts form a continuous loop that runs throughout the entire lifecycle of the application.
