@@ -256,20 +256,3 @@ h1 {
   -moz-text-fill-color: transparent;
 }
 </style>
-
----
----
-# What
-<img src="./demo.gif"/>
-
----
----
-# testing
-
----
----
-# hello world
-
----
----
-# haha
