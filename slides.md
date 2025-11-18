@@ -15,9 +15,25 @@ transition: slide-left
 
 Thet Naing Tun
 
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
+---
+---
+# Why CLI Applications?
+- It has been part of the developer day to day workflow
+- using CLI app doesn't break our workflow
+- I also build my own CLI app to make my life easier
+---
+---
+# synrk
+- I found myself having many fork repositories.
+- updating one after another can be time consuming and tedious
+- so I made this tool
+
+
+
+---
+---
+# Agenda
+<Toc />
 
 ---
 ---
@@ -54,7 +70,8 @@ type Model interface {
 	View() string
 }
 ```
-This mean <b>any</b> type which implements these three methods can be a model
+
+This mean <b>any</b> can be <b>model</b> as long as it implement these methods.
 
 <style>
 h1 {
@@ -69,6 +86,7 @@ h1 {
 </style>
 
 ---
+level: 2
 ---
 # Model: The Heart of the Application
 
@@ -183,14 +201,38 @@ func(m *model)Update(msg tea.Msg)(tea.Model, tea.Cmd){
 }
 ```
 ````
+---
+level : 2
+---
+# Message: bubbletea.Msg
+- Simply an empty interface
+- Any type can be used as a `Msg`
+
+```go
+// https://pkg.go.dev/github.com/charmbracelet/bubbletea#Msg
+
+type Msg interface{}
+
+type fetchProductsDone{
+  products []Product
+}
+
+func fetchProducts() tea.Msg {
+  return fetchProductsDone{
+    products: []Product{}
+  }
+}
+```
+
 
 ---
+level: 2
 ---
-# Commands
+# Commands: bubbletea.Cmd
 - A command is simply a function that returns a `tea.Msg`.
-- Used to perform I/O (e.g. reading from a disk, making network calls).
+- Use to perform I/O (e.g. reading from a disk, making network calls).
 
-```go [main.go]
+```go
 type fetchProductsDone{
   products []Product
 }
@@ -212,8 +254,9 @@ func fetchProducts() tea.Msg{
 }
 ```
 ---
+level: 2
 ---
-# Commands(Cont'd)
+# Commands(Cont'd): How to use it
 - Return a command from `Update` method together with updated model.
 - Bubbletea will call the command for us.
 ````md magic-move {lines: true}
