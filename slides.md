@@ -23,23 +23,9 @@ layout: center
 layout: center
 ---
 # Who is this for?
-- New to building CLI apps.
-- Want to build CLI app to meet your own need.
-- Veteram who experienced in building CLI application can also gain different perspective on how to build CLI application in new paradim
----
-layout: center
-class: text-center
----
-# What can we build with Bubbletea framework?
----
-level: 2
----
-# gh-dash
----
-level: 2
----
-# hackernew
-
+- Anyone new to building CLI applications.
+- Anyone who wants to create a CLI tool for their own needs.
+- Veterans in CLI development will gain a different perspective through this new paradigm.
 ---
 ---
 # Agenda
@@ -68,8 +54,8 @@ These three concepts form a continuous loop that runs throughout the entire life
 ---
 
 # Bubbletea
-
 Bubbletea TUI framework based on ELM architecture. In Bubbletea Model is represent as an `interface` which define three methods `Init`, `Update` and `View`.
+<FunImage src="/images/charm/bubbletea.png" position="bottom-right" />
 
 ```go
 // https://pkg.go.dev/github.com/charmbracelet/bubbletea#Model
