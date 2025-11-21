@@ -2,7 +2,7 @@
   <div class="random-gopher">
     <img 
       :src="gopherImage" 
-      :alt="`Gopher ${selectedGopher}`"
+      :alt="`Gopher image`"
       class="gopher-img"
     />
   </div>
@@ -12,16 +12,22 @@
 import { computed } from 'vue'
 import { useSlideContext } from '@slidev/client'
 
-const gopherNumbers = [1, 2, 3, 20, 21, 33, 41, 50]
+interface Props {
+  gophers: string[]
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  gophers: () => ['/images/gophers/1.png', '/images/gophers/2.png', '/images/gophers/3.png', '/images/gophers/20.png', '/images/gophers/21.png', '/images/gophers/33.png', '/images/gophers/41.png', '/images/gophers/50.png']
+})
 
 // Use current page number to select gopher (ensures unique gopher per slide)
 const { $page } = useSlideContext()
 const selectedGopher = computed(() => {
-  const pageIndex = ($page.value - 1) % gopherNumbers.length
-  return gopherNumbers[pageIndex]
+  const pageIndex = ($page.value - 1) % props.gophers.length
+  return props.gophers[pageIndex]
 })
 
-const gopherImage = computed(() => `/images/gophers/${selectedGopher.value}.png`)
+const gopherImage = computed(() => selectedGopher.value)
 </script>
 
 <style scoped>
