@@ -29,12 +29,7 @@ layout: center
 - Anyone who wants to create a CLI tool for their own needs.
 - Veterans in CLI development will gain a different perspective through this new paradigm.
 
-<FunImage src="/devfest2k25/images/gophers/3.png"/>
-
----
----
-# Agenda
-<Toc />
+<FunImage src="images/gophers/3.png"/>
 
 ---
 ---
@@ -336,7 +331,7 @@ h1 {
 # moodify
 
 <img src="/images/demo.gif"/>
-<FunImage src="/devfest2k25/images/gophers/2.png" position="top-right"/>
+<FunImage src="images/gophers/2.png" position="top-right"/>
 ---
 layout: center
 ---
