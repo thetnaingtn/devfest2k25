@@ -38,7 +38,7 @@ layout: center
 <FunImage src="images/gophers/3.png"/>
 
 ---
----
+
 # The Elm Architecture
 <v-click>
 The Elm Architecture revolve around three main concepts:
@@ -57,6 +57,11 @@ These three concepts form a continuous loop that runs throughout the entire life
 </p>
 
 <FunImage src="images/gophers/50.png"/>
+
+<!--
+- no one invent this archiitecture
+- elm programmer realize the same pattern repeatedly
+-->
 
 ---
 ---
@@ -288,6 +293,7 @@ func fetchProducts() tea.Msg{
 ---
 level: 2
 ---
+
 # Commands(Cont'd): bubbletea.Cmd
 - Return a command from `Update` method together with updated model.
 - Bubbletea will call the command for us.
@@ -318,6 +324,12 @@ func(m *model)Update(msg tea.Msg)(tea.Model, tea.Cmd){
 }
 ```
 ````
+
+<!--
+- returning from the update mean do more things.
+- tea.Batch(cmds...)
+-->
+
 ---
 ---
 # TUI Components
