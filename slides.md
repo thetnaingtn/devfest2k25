@@ -10,6 +10,7 @@ class: text-center
 transition: slide-left
 ---
 <img src="/images/title.jpg"/>
+
 ---
 layout: center
 ---
@@ -18,6 +19,7 @@ layout: center
   - Software Engineer at Kasikorn-X
   - <a href="https://thetnaingtun.dev">thetnaingtun.dev</a>
 - Amateur Badminton Player 🏸 
+<FunImage src="/devfest2k25/images/gophers/1.png"/>
 
 ---
 layout: center
@@ -26,6 +28,9 @@ layout: center
 - Anyone new to building CLI applications.
 - Anyone who wants to create a CLI tool for their own needs.
 - Veterans in CLI development will gain a different perspective through this new paradigm.
+
+<FunImage src="/devfest2k25/images/gophers/3.png"/>
+
 ---
 ---
 # Agenda
@@ -50,13 +55,14 @@ The Elm Architecture revolve around three main concepts:
 These three concepts form a continuous loop that runs throughout the entire lifecycle of the application.
 </p>
 
+<FunImage src="/devfest2k25/images/gophers/50.png"/>
+
 ---
 ---
 
 # Bubble Tea
 - Bubble Tea TUI framework based on ELM architecture. 
 - In Bubble Tea `Model` is an **interface** with three methods `Init`, `Update` and `View`.
-<FunImage src="/devfest2k25/images/charm/bubbletea.png" position="bottom-right" />
 
 ```go
 // https://pkg.go.dev/github.com/charmbracelet/bubbletea#Model
@@ -69,7 +75,7 @@ type Model interface {
 ```
 
 This mean any user defined **type** can be a `Model` as long as it implement these three methods.
-
+<FunImage src="/devfest2k25/images/charm/bubbletea.png" position="bottom-right" />
 <style>
 h1 {
   background-color: #854cff;
@@ -198,6 +204,9 @@ func(m *model)Update(msg tea.Msg)(tea.Model, tea.Cmd){
 }
 ```
 ````
+
+<FunImage src="/devfest2k25/images/charm/bubbletea.png" position="top-right" />
+
 ---
 level : 2
 ---
@@ -238,6 +247,8 @@ func checkServer() tea.Msg{
 }
 ```
 ````
+<FunImage src="/devfest2k25/images/charm/bubbles.png" position="bottom-right" />
+
 ---
 level: 2
 ---
@@ -266,12 +277,17 @@ func fetchProducts() tea.Msg{
   }
 }
 ```
+<FunImage src="/devfest2k25/images/charm/lipgloss.png" position="top-right" />
+
 ---
 level: 2
 ---
 # Commands(Cont'd): How to use it
 - Return a command from `Update` method together with updated model.
 - Bubbletea will call the command for us.
+
+<FunImage src="/devfest2k25/images/charm/bubbletea.png" position="top-right" />
+
 ````md magic-move {lines: true}
 ```go{*|7|12|13-14|15-16|19}
 type model struct{
@@ -301,6 +317,7 @@ layout: center
 ---
 # Demo Time!
 <img class="mt-4 mx-auto" width="100" height="100" src="/images/moodify-github.png"/>
+<FunImage src="/devfest2k25/images/gophers/41.png"/>
 
 <style>
 h1 {
@@ -319,3 +336,21 @@ h1 {
 # moodify
 
 <img src="/images/demo.gif"/>
+<FunImage src="/devfest2k25/images/gophers/2.png" position="top-right"/>
+---
+layout: center
+---
+# Q & A
+
+<FunImage src="/devfest2k25/images/gophers/21.png"/>
+<style>
+h1 {
+  background-color: #854cff;
+  background-image: linear-gradient(45deg, #854cff 10%, #6a4dff 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
