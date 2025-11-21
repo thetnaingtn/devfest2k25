@@ -53,8 +53,9 @@ These three concepts form a continuous loop that runs throughout the entire life
 ---
 ---
 
-# Bubbletea
-Bubbletea TUI framework based on ELM architecture. In Bubbletea Model is represent as an `interface` which define three methods `Init`, `Update` and `View`.
+# Bubble Tea
+- Bubble Tea TUI framework based on ELM architecture. 
+- In Bubble Tea `Model` is an **interface** with three methods `Init`, `Update` and `View`.
 <FunImage src="/images/charm/bubbletea.png" position="bottom-right" />
 
 ```go
@@ -67,7 +68,7 @@ type Model interface {
 }
 ```
 
-This mean <b>any</b> can be <b>model</b> as long as it implement these methods.
+This mean any user defined **type** can be a `Model` as long as it implement these three methods.
 
 <style>
 h1 {
@@ -201,14 +202,24 @@ func(m *model)Update(msg tea.Msg)(tea.Model, tea.Cmd){
 level : 2
 ---
 # Message: bubbletea.Msg
-- Simply an empty interface
-- Any type can be used as a `Msg`
+- A way to tell Bubble Tea that “something happened.”
+- It’s simply an empty interface.
+- Any type can be used as a Msg.
 
+````md magic-move {lines: true}
 ```go
 // https://pkg.go.dev/github.com/charmbracelet/bubbletea#Msg
 
 type Msg interface{}
 
+```
+```go
+func doSomething() tea.Msg {
+  // perform task!
+  return tea.Msg{}
+}
+```
+```go
 type fetchProductsDone{
   products []Product
 }
@@ -219,8 +230,14 @@ func fetchProducts() tea.Msg {
   }
 }
 ```
+```go
+type statusCode int
 
-
+func checkServer() tea.Msg{
+  return statusCode(404)
+}
+```
+````
 ---
 level: 2
 ---
@@ -283,6 +300,7 @@ func(m *model)Update(msg tea.Msg)(tea.Model, tea.Cmd){
 layout: center
 ---
 # Demo Time!
+<img class="mt-4 mx-auto" width="100" height="100" src="/images/moodify-github.png"/>
 
 <style>
 h1 {
@@ -295,3 +313,9 @@ h1 {
   -moz-text-fill-color: transparent;
 }
 </style>
+
+---
+---
+# moodify
+
+<img src="/images/demo.gif"/>
